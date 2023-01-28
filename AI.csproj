@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AI.Lib\**" />
+    <EmbeddedResource Remove="AI.Lib\**" />
+    <None Remove="AI.Lib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="AI.Lib\AI.Lib.csproj" />
+  </ItemGroup>
+  
+
+</Project>
