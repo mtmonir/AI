@@ -11,7 +11,7 @@ namespace AI
             var rain = new Symbol("rain");
             var hagrid = new Symbol("hagrid");
             var dumbledore = new Symbol("dumbledore");
-            var notrain = new Not(rain);
+           
 
             var knowledge = new And(
                 new Implication(new Not(rain), hagrid),
@@ -20,8 +20,14 @@ namespace AI
                 dumbledore
                 );
 
-         var modelChecker = ModelChecker.ModelCheck(knowledge, notrain);
+            Console.WriteLine(knowledge.formula()); 
+            var modelChecker = ModelChecker.ModelCheck(knowledge, rain);
             Console.WriteLine(modelChecker);
+            var newkno = new And(new Not(rain), hagrid);
+            var nd = new Dictionary<string, bool>();
+            nd.Add("hagrid", true);
+            nd.Add("rain", false);
+            Console.WriteLine(newkno.evaluate(nd));
         }
     }
 }

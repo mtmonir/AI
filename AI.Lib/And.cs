@@ -61,7 +61,7 @@ namespace AI.Lib
             {
                 return conjuncts[0].formula();
             }
-            return string.Join(" ∧ ", conjuncts.Select(c => Sentence.parenthesize(c.formula())));
+            return string.Join(" ^ ", conjuncts.Select(c => Sentence.parenthesize(c.formula())));
         }
 
         public override HashSet<string> symbols()
